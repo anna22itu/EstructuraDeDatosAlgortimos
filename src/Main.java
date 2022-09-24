@@ -8,8 +8,6 @@ public class Main {
         Queue<Integer> q = new QueueImpl<Integer>(5);
         try {
 
-
-
         q.push(1);
             System.out.println(q.size());
         q.push(2);

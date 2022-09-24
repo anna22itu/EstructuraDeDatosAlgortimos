@@ -1,6 +1,19 @@
 
 public class QueueImpl<E> implements Queue<E> {
 
+    E[] queue; // Definimos el nombre de la cola
+    int i; // Indice que recorrerá la cola
+
+    /**
+     * Definimos un constructor para inicializar los valores previos
+     */
+
+    public Queue(int length){
+        this.queue = new E[length];
+        this.i = 0;
+
+    }
+
     /**
      * Push:
      * @param e l'element a "encuar"
@@ -8,6 +21,11 @@ public class QueueImpl<E> implements Queue<E> {
      */
 
     public void push(E e) throws FullQueueException{
+        if ( this.queue.size() ==  )
+            throw new FullQueueException ("La cola está llena");
+
+        queue[i] = e;
+        i++;
 
     }
 
