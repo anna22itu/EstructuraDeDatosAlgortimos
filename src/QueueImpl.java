@@ -38,7 +38,18 @@ public class QueueImpl<E> implements Queue<E> {
      * @throws EmptyQueueException (envia una excepció quan no hi ha més elements per treure, cua buida)
      */
     public E pop() throws EmptyQueueException {
+        E[] cola;
+        if (queue.length == 0) {
+            throw new EmptyQueueException();
 
+        } else {
+            cola = (E[]) new Object[queue.length];
+            for (int i = 0; i < queue.length - 1; i++) {
+                cola[i] = queue[i + 1];
+            }
+            this.queue = cola;
+        }
+        return (E) cola;
     }
 
 
