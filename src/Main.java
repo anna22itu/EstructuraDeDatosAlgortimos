@@ -12,15 +12,17 @@ public class Main {
             System.out.println(q.size());
         q.push(2);
             System.out.println(q.size());
-/*        q.push(3);
+        q.push(3);
             System.out.println(q.size());
         q.push(4);
             System.out.println(q.size());
         q.push(5);
             System.out.println(q.size());
+        q.pop();
+            System.out.println(q.size());
+        q.push(5);
+            System.out.println(q.size());
 
-          q.push(6);
-*/
 
 
             Class theClass = q.getClass();
@@ -40,10 +42,10 @@ public class Main {
             System.out.println("EXCEPCIÓ!!");
             fullExp.printStackTrace();
         }
-        /*catch (EmptyQueueException empty) {
+        catch (EmptyQueueException empty) {
             System.out.println("EXCEPCIÓ!!");
             empty.printStackTrace();
-        }*/
+        }
 
     }
 }

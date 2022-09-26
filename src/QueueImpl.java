@@ -48,6 +48,7 @@ public class QueueImpl<E> implements Queue<E> {
             for (int i = 0; i < queue.length - 1; i++) {
                 cola[i] = queue[i + 1];
             }
+            this.i=this.i-1;
             this.queue = cola;
         }
         return (E) cola;
