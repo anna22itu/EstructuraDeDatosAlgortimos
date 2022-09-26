@@ -3,7 +3,7 @@ public class QueueImpl<E> implements Queue<E> {
 
     E[] queue; // Definimos el nombre de la cola
     int i; // Indice que recorrerá la cola
-    int max; // Valor máximo que tiene la cola
+
 
     /**
      * Definimos un constructor para inicializar los valores previos
@@ -12,7 +12,6 @@ public class QueueImpl<E> implements Queue<E> {
     public QueueImpl(int length) {
         this.queue = (E[]) new Object[length];
         this.i = 0;
-        this.max = length;
     }
 
     /**
@@ -23,7 +22,7 @@ public class QueueImpl<E> implements Queue<E> {
      */
 
     public void push(E e) throws FullQueueException {
-        if (this.size() == max) // Si el índice == max == size de la cola == está lleno --> no cabe nada más
+        if (this.size() == queue.length) // Si el índice == max == size de la cola == está lleno --> no cabe nada más
             throw new FullQueueException();
         else {
             queue[i] = e;
@@ -37,7 +36,7 @@ public class QueueImpl<E> implements Queue<E> {
      * @return devuelve la cola modificada (con el elemento eliminado y los otros desplazados)
      * @throws EmptyQueueException (envia una excepció quan no hi ha més elements per treure, cua buida)
      */
-    public E pop() throws EmptyQueueException {
+    public E pop() throws EmptyQueueException {//throws EmptyQueueException {
         E[] cola;
         if (this.size() == 0) {
             throw new EmptyQueueException();

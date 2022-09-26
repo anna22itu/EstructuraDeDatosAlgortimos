@@ -25,17 +25,6 @@ public class Main {
 
 
 
-            Class theClass = q.getClass();
-            Method[] llistaMetodes = theClass.getDeclaredMethods();
-
-            System.out.println(Arrays.asList(llistaMetodes));
-
-            Field[] llistaAttr = theClass.getDeclaredFields();
-
-            System.out.println(Arrays.asList(llistaAttr));
-
-
-
         }
         catch (FullQueueException fullExp) {
             //
