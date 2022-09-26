@@ -6,6 +6,7 @@ public interface Queue<E> {
      * @throws FullQueueException llença aquesta excepció en el cas que
      * la cua estigui plena
      */
+
     public void push(E e) throws FullQueueException;
 
     public E pop() throws EmptyQueueException;

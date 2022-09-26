@@ -9,7 +9,7 @@ public class QueueImpl<E> implements Queue<E> {
      * Definimos un constructor para inicializar los valores previos
      */
 
-    public void Queue(int length) {
+    public QueueImpl(int length) {
         this.queue = (E[]) new Object[length];
         this.i = 0;
         this.max = length;
@@ -23,7 +23,7 @@ public class QueueImpl<E> implements Queue<E> {
      */
 
     public void push(E e) throws FullQueueException {
-        if (this.i == max) // Si el índice == max == size de la cola == está lleno --> no cabe nada más
+        if (this.size() == max) // Si el índice == max == size de la cola == está lleno --> no cabe nada más
             throw new FullQueueException();
         else {
             queue[i] = e;
@@ -39,10 +39,11 @@ public class QueueImpl<E> implements Queue<E> {
      */
     public E pop() throws EmptyQueueException {
         E[] cola;
-        if (queue.length == 0) {
+        if (this.size() == 0) {
             throw new EmptyQueueException();
 
-        } else {
+        }
+        else {
             cola = (E[]) new Object[queue.length];
             for (int i = 0; i < queue.length - 1; i++) {
                 cola[i] = queue[i + 1];
