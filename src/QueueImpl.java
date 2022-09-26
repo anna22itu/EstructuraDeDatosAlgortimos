@@ -9,7 +9,7 @@ public class QueueImpl<E> implements Queue<E> {
      * Definimos un constructor para inicializar los valores previos
      */
 
-    public void Queue(int length) {
+    public QueueImpl(int length) {
         this.queue = (E[]) new Object[length];
         this.i = 0;
         this.max = length;
